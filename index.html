@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Dashboard Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="terminal-container">
+      <div class="scanlines"></div>
+      <h1 class="main-title terminal-text">
+        C:\User\JavaScript API Dashboard> ACCESS GRANTED
+      </h1>
+    </div>
+    <div class="grid-container">
+      <section class="grid-item info-widget" id="dog-api">
+        <h2>🐶 Random Dog</h2>
+        <button onclick="getDogImage()">Get Dog</button>
+        <div class="output" id="dog-output"></div>
+      </section>
+
+      <section class="grid-item info-widget" id="cat-api">
+        <h2>🐱 Random Cat</h2>
+        <button onclick="getCatImage()">Get Cat</button>
+        <div class="output" id="cat-output"></div>
+      </section>
+
+      <section class="grid-item info-widget" id="weather-api">
+        <h2>☀️ Weather Info</h2>
+        <label for="city">Enter City</label>
+        <input
+          type="text"
+          placeholder="Enter City"
+          name="city"
+          id="city"
+          class="geo"
+        />
+        <label for="country">Enter Country</label>
+        <input
+          type="text"
+          placeholder="Enter Country"
+          name="country"
+          id="country"
+          class="geo"
+        />
+        <button onclick="getWeather()">Get Weather</button>
+        <div class="output" id="weather-output"></div>
+      </section>
+
+      <section class="grid-item info-widget" id="currency-api">
+        <h2>💱 Currency Conversion</h2>
+        <label for="currency-original">Current Currency:</label>
+        <select
+          name="currency-original"
+          id="currency-original-select"
+          class="geo"
+        ></select>
+        <label for="currency-convert">Convert To:</label>
+        <select
+          name="currency-convert"
+          id="currency-original-convert"
+          class="geo"
+        ></select>
+        <label for="amount">Amount</label>
+        <input
+          type="number"
+          placeholder="100"
+          name="amount"
+          id="amount"
+          class="geo"
+        />
+        <button onclick="getExchangeRates()">Convert</button>
+        <div class="output" id="currency-output"></div>
+      </section>
+
+      <section class="grid-item info-widget" id="movies-api">
+        <h2>🎮 Trending Movies</h2>
+        <button onclick="getMovies()">Get Movies</button>
+        <div class="output" id="movies-output"></div>
+      </section>
+
+      <section class="grid-item info-widget" id="github-api">
+        <h2>🧑‍💻 GitHub User</h2>
+        <label for="github-user-name">User Name</label>
+        <input
+          type="text"
+          placeholder="DevKellyK"
+          name="github-user-name"
+          id="github-user-name"
+          class="geo"
+        />
+        <button onclick="getGitHubUser()">Get User</button>
+        <div class="output" id="github-output"></div>
+      </section>
+
+      <section class="grid-item info-widget" id="joke-api">
+        <h2>🤣 Random Joke</h2>
+        <label for="joke-type">Joke Type</label>
+        <select name="joke-type" id="joke-type" class="geo">
+          <option value="Chuck Norris">Chuck Norris</option>
+          <option value="Dad">Dad</option>
+        </select>
+        <button onclick="getJoke()">Get Joke</button>
+        <div class="output" id="joke-output"></div>
+      </section>
+
+      <section class="grid-item info-widget" id="public-api">
+        <h2>📚 Public APIs</h2>
+        <button onclick="getPublicApiInfo()">Show One</button>
+        <div class="output" id="publicapi-output"></div>
+      </section>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

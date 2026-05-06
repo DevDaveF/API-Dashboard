@@ -1,0 +1,3 @@
+const CONFIG = {
+  TMDB_TOKEN: "YOUR API KEY GOES HERE",
+};
